@@ -31,6 +31,7 @@ Download Tomcat:
 ```shell
 wget https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/9.0.46/tomcat-9.0.46.zip -P workspace/
 unzip workspace/tomcat-9.0.46.zip -d workspace/
+chmod +x -R ./workspace/apache-tomcat-9.0.46/bin
 ```
 
 Copy .war to Tomcat:
@@ -42,14 +43,12 @@ cp target/customers-tomcat-0.0.1-SNAPSHOT.war workspace/apache-tomcat-9.0.46/web
 Start Tomcat:
 
 ```shell
-chmod +x -R ./workspace/apache-tomcat-9.0.46/bin
 ./workspace/apache-tomcat-9.0.46/bin/startup.sh
 ```
 
 Stop Tomcat:
 
 ```shell
-chmod +x -R ./workspace/apache-tomcat-9.0.46/bin
 ./workspace/apache-tomcat-9.0.46/bin/shutdown.sh
 ```
 
