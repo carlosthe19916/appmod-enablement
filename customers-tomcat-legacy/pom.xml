@@ -17,6 +17,7 @@
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<spring-framework.version>5.3.7</spring-framework.version>
+		<tomcat.id>9x</tomcat.id>
 		<tomcat.version>9.0.46</tomcat.version>
 		<spring-data.version>2021.0.1</spring-data.version>
 		<hibernate.version>5.4.32.Final</hibernate.version>
@@ -120,13 +121,6 @@
 			<artifactId>postgresql</artifactId>
 			<version>42.2.23</version>
 		</dependency>
-		<!-- Corporate libraries -->
-		<dependency>
-			<groupId>io.konveyor.demo</groupId>
-			<artifactId>config-utils</artifactId>
-			<version>1.0.0</version>
-		</dependency>
-
 	</dependencies>
 	<build>
 		<plugins>
@@ -149,6 +143,21 @@
 				<version>${maven-resources-plugin.version}</version>
 				<configuration>
 					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.codehaus.cargo</groupId>
+				<artifactId>cargo-maven3-plugin</artifactId>
+				<version>1.9.10</version>
+				<configuration>
+					<container>
+						<containerId>tomcat${tomcat.id}</containerId>
+						<type>installed</type>
+						<zipUrlInstaller>
+							<url>https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/${tomcat.version}/tomcat-${tomcat.version}.zip</url>
+						</zipUrlInstaller>
+					</container>
 				</configuration>
 			</plugin>
 		</plugins>

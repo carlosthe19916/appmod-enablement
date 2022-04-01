@@ -16,8 +16,6 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import io.konveyor.demo.config.ApplicationConfiguration;
-
 @Configuration
 @EnableJpaRepositories(basePackages = {
         "io.konveyor.demo.ordermanagement.repository"
