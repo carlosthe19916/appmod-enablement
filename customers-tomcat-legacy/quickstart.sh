@@ -12,14 +12,14 @@ mvn clean package
 
 # Download Tomcat
 rm -rf workspace/
-wget https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/9.0.46/tomcat-9.0.46.zip -P workspace/
-unzip workspace/tomcat-9.0.46.zip -d workspace/
-chmod +x -R ./workspace/apache-tomcat-9.0.46/bin
+wget https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/10.1.0-M12/tomcat-10.1.0-M12.zip -P workspace/
+unzip workspace/tomcat-10.1.0-M12.zip -d workspace/
+chmod +x -R ./workspace/apache-tomcat-10.1.0-M12/bin
 
 # Copy .war to Tomcat
-cp target/customers-tomcat-0.0.1-SNAPSHOT.war workspace/apache-tomcat-9.0.46/webapps/customers-tomcat.war
+cp target/customers-tomcat-0.0.1-SNAPSHOT.war workspace/apache-tomcat-10.1.0-M12/webapps/customers-tomcat.war
 
 # Start Tomcat
-./workspace/apache-tomcat-9.0.46/bin/startup.sh
+./workspace/apache-tomcat-10.1.0-M12/bin/startup.sh
 
 sleep 10s
