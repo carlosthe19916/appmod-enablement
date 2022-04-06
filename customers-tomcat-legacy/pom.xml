@@ -11,14 +11,14 @@
 	<description>Remaining services for the legacy Order Management application</description>
 
 	<properties>
-		<java.version>1.8</java.version>
+		<java.version>17</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
-		<spring-framework.version>5.3.7</spring-framework.version>
-		<tomcat.id>9x</tomcat.id>
-		<tomcat.version>9.0.46</tomcat.version>
+		<spring-framework.version>6.0.0-M3</spring-framework.version>
+		<tomcat.id>10x</tomcat.id>
+		<tomcat.version>10.1.0-M14</tomcat.version>
 		<spring-data.version>2021.0.1</spring-data.version>
 		<hibernate.version>5.4.32.Final</hibernate.version>
 		<hibernate-validator.version>6.2.0.Final</hibernate-validator.version>
@@ -31,6 +31,14 @@
 		<maven-resources-plugin.version>3.2.0</maven-resources-plugin.version>
 
 	</properties>
+
+	<repositories>
+		<repository>
+			<id>repository.spring.milestone</id>
+			<name>Spring Milestone Repository</name>
+			<url>https://repo.spring.io/milestone</url>
+		</repository>
+	</repositories>
 
 	<dependencyManagement>
 		<dependencies>
